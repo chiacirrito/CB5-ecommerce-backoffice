@@ -1,0 +1,30 @@
+.main {
+  background-color: lightgray;
+  display: flex;
+  justify-content: center;
+  height: 30px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  svg path {
+    transition: all 0.2s ease;
+  }
+  &:hover {
+    color: #fa6382;
+  }
+  &:hover svg path {
+    stroke: #fa6382;
+  }
+  .icon {
+    font-size: 20px;
+  }
+  .label {
+  }
+}
+
+ul {
+  display: flex;
+  justify-content: flex-end;
+  gap: 5px;
+  background-color: lightgray;
+  padding: 10px 20px;
+}

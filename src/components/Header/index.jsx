@@ -1,13 +1,14 @@
 import styles from "./styles.module.scss";
+import { GrDiamond, GrFavorite } from "react-icons/gr";
 
 const Header = () => {
   return (
     <div className={styles.main}>
-      <p>E-commerce</p>
+      <GrDiamond />
       <div className={styles.logo}>
         <h1>Hello!</h1>
       </div>
-      <div className={styles.btnSet}>🔘</div>
+      <GrFavorite />
     </div>
   );
 };
