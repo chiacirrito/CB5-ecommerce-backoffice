@@ -13,6 +13,12 @@ const Home = () => {
         quos non quibusdam consequatur et cupiditate natus!
       </p>
       <img src="https://picsum.photos/400/200" alt="img" />
+      <p>
+        Eum blanditiis quod 33 facilis quod et inventore veritatis ut mollitia
+        recusandae et aspernatur cumque. Sed dolor quae sit minus rerum aut
+        dolorum numquam. Et veniam natus id voluptatem quis aut nobis officia
+        eos itaque autem.
+      </p>
     </div>
   );
 };

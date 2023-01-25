@@ -4,7 +4,7 @@ import styles from "./styles.module.scss";
 
 const NavBar = ({ setRoute }) => {
   return (
-    <ul cassName={styles.main}>
+    <ul className={styles.main}>
       {navBarLinks.map((item, index) => (
         <LiComponent
           setRoute={setRoute}

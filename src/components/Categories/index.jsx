@@ -5,13 +5,14 @@ import Table from "../Table";
 
 const Categories = () => {
   const categoriesStateInit = {
-    category: [],
-    loading: false,
+    categories: [],
+    loading: true,
   };
 
   const [categoriesState, setCategoriesState] = useState(categoriesStateInit);
 
   const getData = () => {
+    setCategoriesState({ ...categoriesState, loading: true });
     GET("categories").then((data) =>
       setCategoriesState({
         loading: false,
@@ -19,6 +20,7 @@ const Categories = () => {
       })
     );
   };
+
   useEffect(() => {
     getData();
   }, []);
