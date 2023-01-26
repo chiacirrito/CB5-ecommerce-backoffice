@@ -6,8 +6,22 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  p {
+  .text,
+  .description {
+    border: 1px solid gray;
+    background-color: rgba(128, 128, 128, 0.071);
+    padding: 40px;
     text-align: justify;
-    margin: 10px;
+    font-weight: lighter;
+    font-size: 12pt;
+    letter-spacing: 2px;
+  }
+  .img {
+    margin: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
   }
 }
