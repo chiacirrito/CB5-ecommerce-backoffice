@@ -1,38 +1,39 @@
 import { useEffect, useState } from "react";
 import styles from "./styles.module.scss";
-import { GET } from "../../libs/HTTP";
+import { DELETE, GET } from "../../libs/HTTP";
 import Cards from "../Cards";
 
 const Products = () => {
-  const productsStateInit = {
-    products: [],
-    loading: true,
-  };
+  const [products, setProducts] = useState([]);
 
-  const [productsState, setProductsState] = useState(productsStateInit);
-
-  const getData = () => {
-    setProductsState({ ...productsState, loading: true });
-    GET("products").then((data) =>
-      setProductsState({
-        loading: false,
-        products: data,
-      })
-    );
+  const reloadItems = () => {
+    GET("products").then((data) => setProducts(data));
   };
 
   useEffect(() => {
-    getData();
+    reloadItems();
   }, []);
+
+  const deleteElement = (id) => {
+    DELETE("products", id).then((data) => {
+      if (data.status === 200) {
+        reloadItems();
+      }
+    });
+  };
 
   return (
     <div className={styles.main}>
-      <h3>Products</h3>
-      <Cards
-        productsState={productsState.products}
-        loading={productsState.loading}
-        getData={getData}
-      />
+      <ul>
+        {products.map((item, index) => (
+          <Cards
+            reloadItems={reloadItems}
+            deleteElement={deleteElement}
+            item={item}
+            key={index}
+          />
+        ))}
+      </ul>
     </div>
   );
 };
