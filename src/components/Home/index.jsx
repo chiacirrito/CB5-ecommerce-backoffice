@@ -16,7 +16,7 @@ const Home = () => {
         </p>
       </div>
       <div className={styles.img}>
-        <img src="https://picsum.photos/200/200" alt="img" />
+        <img src="https://picsum.photos/300/300" alt="img" />
         <img src="https://picsum.photos/200/200" alt="img" />
         <img src="https://picsum.photos/200/200" alt="img" />
       </div>
